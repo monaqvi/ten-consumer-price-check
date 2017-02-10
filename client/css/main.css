@@ -10,6 +10,9 @@ body {
   color: black;
   font-size: 14px;
 }
+main {
+  margin-top: 2.5em;
+}
 h1,
 h2,
 h3,
