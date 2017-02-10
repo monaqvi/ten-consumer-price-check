@@ -13,14 +13,6 @@ $(function() {
       toggleTooltip.call(this);
     });
 
-    second.change(function() {
-      toggleTooltip.call(this);
-    });
-
-    second.keypress(function() {
-      toggleTooltip.call(this);
-    });
-
     function toggleTooltip() {
       var self = $(this);
       var valid = !self.find('input:invalid, select:invalid, textarea:invalid').length;
