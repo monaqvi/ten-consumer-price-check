@@ -126,7 +126,7 @@ div.clear-float {
   }
   .home-menu a.highlight {
     color: #6FBEF3;
-    text-shadow: 0 0 black;
+    text-shadow: 1px 1px black;
   }
   .home-menu li a:hover,
   .home-menu li a:focus {
@@ -257,6 +257,12 @@ blockquote {
   blockquote p {
     color: white;
   }
+    blockquote p span.emphasize {
+      color: white;
+      font-size: 130%;
+      font-weight: bold;
+      text-shadow: 1px 1px black;
+    }
   blockquote cite {
     display: block;
   }
