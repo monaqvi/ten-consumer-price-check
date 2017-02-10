@@ -1,4 +1,18 @@
 $(function() {
+  (function contactButtons() {
+    $('#speak_with_add_contact').click(function() {
+      var add = $('#templates > #contact > div').clone();
+      $('#contacts').append(add);
+      $('#speak_with_remove_contact').show()
+    });
+
+    $('#speak_with_remove_contact').click(function() {
+      var numFields = $('#contacts > .query-group').length;
+      if(numFields > 1) $('#contacts > .query-group:last-of-type').remove();
+      if(numFields === 2) $('#speak_with_remove_contact').hide();
+    });
+  })();
+
   (function removeTooltips() {
     var queryGroups = $('.query-group');
     

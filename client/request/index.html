@@ -211,47 +211,9 @@
               </div>
             </div>
 
-            <div class="tooltip">
-              <legend class="pure-u-1">
-                <h4 class="no-margin">Some examples:</h4>
-              </legend>
-              <div class="pure-g example">
-                <div class="pure-u-1 pure-u-lg-1-5">
-                  <fieldset class="form-group">
-                    <span>currently works</span>
-                    <i class="bar"></i>
-                  </fieldset>
-                </div>
-                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-                  <div class="pure-g">
-                    <p class="pure-u-1 pure-u-md-1-3 is-center">
-                      for
-                    </p>
-                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
-                      <span>Marketing Manager</span>
-                      <i class="bar"></i>
-                    </fieldset>
-                  </div>
-                </div>
-                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-                  <div class="pure-g">
-                    <p class="pure-u-1 pure-u-md-1-3 is-center">
-                      at
-                    </p>
-                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
-                      <span>PepsiCo, Kraft, any large CPG firm</span>
-                      <i class="bar"></i>
-                    </fieldset>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="indented">
-            <fieldset class="pure-u-1">
+            <fieldset class="pure-u-1" id="contacts">
               <h4 class="no-margin">Do you have any specific people in mind you'd like to contact?</h4>
-              <div class="pure-g">
+              <div class="pure-g query-group">
                 <div class="pure-u-1">
                   <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
                     <input type="text" name="name" required>
@@ -267,12 +229,22 @@
               </div>
             </fieldset>
 
-          <div class="indented">
+            <div class="pure-u-1">
+              <fieldset class="pure-u-1 pure-u-md-1-3">
+                <div class="pure-u-1 pure-u-md-1-3 is-center float-right" id="speak_with_add_contact">
+                  <button class="button tight sm-fill no-margin" type="button"><span>+</span></button>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-3 is-center float-left hide" id="speak_with_remove_contact">
+                  <button class="button tight red sm-fill" type="button"><span>-</span></button>
+                </div>
+                <div class="clear-float"></div>
+              </fieldset>
+            </div>
+
             <fieldset class="form-group">
               <textarea required></textarea>
               <label class="control-label" for="textarea">Anything else we should know about your ideal advisor?</label><i class="bar"></i>
             </fieldset>
-          </div>
         </section>
 
         <section>
@@ -385,6 +357,25 @@
           <a class="button extra-bottom-margin sm-fill" href="#invalid" id="submit"><span>Connect Me</span></a>
         </div>
       </form>
+    </div>
+
+    <div class="hide" id="templates">
+      <div id="contact">
+        <div class="pure-g query-group">
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+              <input type="text" name="name" required>
+              <label class="control-label" for="input">Name</label><i class="bar"></i>
+            </fieldset>
+          </div>
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+              <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required/>
+              <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
+            </fieldset>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="m-box ribbon dark-ribbon footer">
