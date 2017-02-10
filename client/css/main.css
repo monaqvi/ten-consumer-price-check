@@ -369,9 +369,6 @@ blockquote {
 .pure-form .query-group > div {
   margin-bottom: 1.5em;
 }
-#query-template {
-  display: none;
-}
 
 #speak_with_remove_criteria {
   display: none;
