@@ -1,0 +1,5 @@
+node_modules/
+npm-debug.log
+
+**/google-generated-creds.json
+**/google-sheet-id.js
