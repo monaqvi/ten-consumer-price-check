@@ -11,7 +11,7 @@ body {
   font-size: 14px;
 }
 main {
-  margin-top: 2.5em;
+  margin-top: 3.5em;
 }
 h1,
 h2,
@@ -369,7 +369,7 @@ blockquote {
   position : relative;
 }
 
-.pure-form .query-group > div {
+.pure-form .query-group > .queries {
   margin-bottom: 1.5em;
 }
 
@@ -532,6 +532,7 @@ fieldset {
   text-align: left;
   color: #333;
   display: block;
+  font-weight: normal;
 }
 .checkbox input,
 .form-radio input {
@@ -590,8 +591,8 @@ fieldset {
 }
 
 .checkbox {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 .checkbox .helper {
   color: #999;
@@ -651,11 +652,6 @@ fieldset {
   height: 1.2rem;
   -webkit-transition-delay: 0.28s;
           transition-delay: 0.28s;
-}
-
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: 1rem;
 }
 
 .has-error .legend.legend, .has-error.form-group .control-label.control-label {
