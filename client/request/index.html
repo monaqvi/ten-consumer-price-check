@@ -29,7 +29,7 @@
               <div class="pure-g">
                 <div class="pure-u-1 pure-u-lg-1-5">
                   <fieldset class="form-group" required>
-                    <select required>
+                    <select required name="request_help_stage">
                       <option value="" selected disabled></option>
                       <option value="app">Application review / guidance</option>
                       <option value="interview">Interview preparation</option>
@@ -45,7 +45,7 @@
                       for
                     </p>
                     <fieldset class="pure-u-1 pure-u-md-2-3 form-group" required>
-                      <input type="text" required/>
+                      <input type="text" required name="request_help_position"/>
                       <label class="control-label" for="input">Position</label><i class="bar"></i>
                     </fieldset>
                   </div>
@@ -56,7 +56,7 @@
                       at
                     </p>
                     <fieldset class="pure-u-1 pure-u-md-2-3 form-group" required>
-                      <input type="text" required/>
+                      <input type="text" required name="request_help_company"/>
                       <label class="control-label" for="input">Company</label><i class="bar"></i>
                     </fieldset>
                   </div>
@@ -165,7 +165,7 @@
 
           <div class="indented">
             <fieldset class="form-group">
-              <textarea required></textarea>
+              <textarea required name="request_help_freeform"></textarea>
               <label class="control-label" for="textarea">Any other details we should know?</label><i class="bar"></i>
             </fieldset>
           </div>
@@ -176,17 +176,20 @@
             <h2 class="no-margin">I want to speak with someone who...</h2>
           </legend>
 
-          <div class="indented">
+          <div class="indented" id="criteria">
+            <fieldset class="pure-u-1" required>
+              <span class="label">Select all that apply:</legend>
+            </fieldset>
             <div class="query-group pure-g">
               <fieldset class="pure-u-1 checkbox">
                 <label>
-                  <input type="checkbox" /><i class="helper"></i>works at the company
+                  <input type="checkbox" name="works_company"/><i class="helper"></i>works at the company
                 </label>
                 <label>
-                  <input type="checkbox"/><i class="helper"></i>works at a competitor
+                  <input type="checkbox" name="works_competitor"/><i class="helper"></i>works at a competitor
                 </label>
                 <label>
-                  <input type="checkbox"/><i class="helper"></i>works in the broader industry 
+                  <input type="checkbox" name="works_industry"/><i class="helper"></i>works in the broader industry 
                 </label>
               </fieldset>
             </div>
@@ -194,13 +197,13 @@
             <div class="query-group pure-g">
               <fieldset class="pure-u-1 checkbox">
                 <label>
-                  <input type="checkbox" /><i class="helper"></i>works in the same role
+                  <input type="checkbox" name="works_same_role"/><i class="helper"></i>works in the same role
                 </label>
                 <label>
-                  <input type="checkbox"/><i class="helper"></i>works with the role
+                  <input type="checkbox" name="works_with_role"/><i class="helper"></i>works with the role
                 </label>
                 <label>
-                  <input type="checkbox"/><i class="helper"></i>hires for the role
+                  <input type="checkbox" name="hires_for_role"/><i class="helper"></i>hires for the role
                 </label>
               </fieldset>
             </div>
@@ -208,17 +211,17 @@
             <div class="query-group pure-g">
               <fieldset class="pure-u-1 checkbox">
                 <label>
-                  <input type="checkbox" /><i class="helper"></i>currently works there
+                  <input type="checkbox" name="currently_works"/><i class="helper"></i>currently works there
                 </label>
                 <label>
-                  <input type="checkbox"/><i class="helper"></i>has worked there in the past
+                  <input type="checkbox" name="has_worked"/><i class="helper"></i>has worked there in the past
                 </label>
               </fieldset>
             </div>
           </div>
 
           <fieldset class="form-group">
-            <textarea required></textarea>
+            <textarea required name="request_someone_freeform"></textarea>
             <label class="control-label" for="textarea">Anything else we should know about your ideal advisor?</label><i class="bar"></i>
           </fieldset>
 
@@ -227,13 +230,13 @@
             <div class="pure-g query-group">
               <div class="pure-u-1">
                 <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
-                  <input type="text" name="name" required>
+                  <input type="text" name="request_someone_specific_name" required>
                   <label class="control-label" for="input">Name</label><i class="bar"></i>
                 </fieldset>
               </div>
               <div class="pure-u-1">
                 <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
-                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required/>
+                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_someone_specific_linkedin" />
                   <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
                 </fieldset>
               </div>
@@ -262,19 +265,19 @@
             <div class="pure-g">
               <div class="pure-u-1">
                 <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
-                  <input type="text" required/>
+                  <input type="text" required name="request_submitter_name"/>
                   <label class="control-label" for="input">Preferred Name</label><i class="bar"></i>
                 </fieldset>
               </div>
               <div class="pure-u-1">
                 <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
-                  <input type="email" required/>
+                  <input type="email" required name="request_submitter_email"/>
                   <label class="control-label" for="input">Email Address</label><i class="bar"></i>
                 </fieldset>
               </div>
               <div class="pure-u-1">
                 <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
-                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required/>
+                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_submitter_linkedin"/>
                   <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
                 </fieldset>
               </div>
@@ -290,12 +293,12 @@
                 <fieldset required>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="privacy" required/><i class="helper"></i>I'm OK sharing my name and profile with the advisor
+                      <input type="radio" name="request_submitter_privacy" required/><i class="helper"></i>I'm OK sharing my name and profile with the advisor
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="privacy" required/><i class="helper"></i>Please DO NOT share my name and profile -- only use generic description
+                      <input type="radio" name="request_submitter_privacy" required/><i class="helper"></i>Please DO NOT share my name and profile -- only use generic description
                     </label>
                   </div>
                 </fieldset>
@@ -309,7 +312,7 @@
               <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-1-3">
                   <fieldset class="form-group" required>
-                    <select required>
+                    <select required name="request_submitter_medium">
                       <option value="" selected disabled></option>
                       <option value="phone">Phone</option>
                       <option value="video">Video Chat</option>
@@ -328,8 +331,8 @@
             <div class="indented">
               <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-1-3">
-                  <fieldset class="pure-u-1 form-group" required>
-                    <input type="date" required/>
+                  <fieldset class="pure-u-1 form-group">
+                    <input type="date" required name="request_submitter_deadline"/>
                     <label class="control-label" for="input">mm/dd/yyyy</label><i class="bar"></i>
                   </fieldset>
                 </div>
@@ -362,7 +365,7 @@
             <h4 class="no-margin">What is the <span class="underline">most you'd pay</span> for your time with your advisor? (<span class="underline">We'll try for lower</span>, but need to know your ceiling).</h4>
             <div class="pure-u-1">
               <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
-                <input type="text" pattern="^[$]?[\d,]+(?:\.[\d]{0,2})?$" min="0" required/>
+                <input type="text" pattern="^[$]?[\d,]+(?:\.[\d]{0,2})?$" min="0" required name="request_max_price"/>
                 <label class="control-label" for="input">Maximum price</label><i class="bar"></i>
               </fieldset>
             </div>
@@ -370,7 +373,7 @@
 
           <div class="indented">
             <fieldset class="form-group">
-              <textarea required></textarea>
+              <textarea required name="request_freeform"></textarea>
               <label class="control-label" for="textarea">Anything else we should know before introducing you?</label><i class="bar"></i>
             </fieldset>
           </div>
@@ -387,13 +390,13 @@
         <div class="pure-g query-group">
           <div class="pure-u-1">
             <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
-              <input type="text" name="name" required>
+              <input type="text" name="request_someone_specific_name" required>
               <label class="control-label" for="input">Name</label><i class="bar"></i>
             </fieldset>
           </div>
           <div class="pure-u-1">
             <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
-              <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required/>
+              <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_someone_specific_likedin"/>
               <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
             </fieldset>
           </div>
@@ -407,5 +410,6 @@
   </main>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
 <script type="text/javascript" src="../js/form.js"></script>
 </html>

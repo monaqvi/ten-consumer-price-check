@@ -343,6 +343,7 @@ blockquote {
 }
 
 .required:after,
+[required] > span.label:after,
 [required] > legend:after,
 [required]> label:after {
   content: '*';
