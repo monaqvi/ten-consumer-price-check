@@ -14,7 +14,7 @@ router.post('/save', (req, res) => {
   const rows = req.body;
   const date = new Date;
 
-  const log = { request_id: randomUuid(), date: `${date.getMonth()}/${date.getDate()}/${date.getYear()}` , time: date.toString() };
+  const log = { request_id: randomUuid(), date: `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}` , time: date.toString() };
   var len = rows.length - 1;
   rows.map((data, i) => saveToGoogle(Object.assign({}, log, data), (i === len) ? res : null));
 });
