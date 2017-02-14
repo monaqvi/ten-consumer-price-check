@@ -263,9 +263,10 @@ blockquote {
   blockquote p {
     color: white;
   }
-    blockquote p span.emphasize {
-      color: white;
-      font-size: 130%;
+    blockquote p span {
+      /*font-size: 130%;*/
+      color: inherit;
+      font-style: italic;
       font-weight: bold;
       text-shadow: 1px 1px black;
     }
