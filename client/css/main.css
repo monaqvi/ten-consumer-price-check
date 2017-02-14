@@ -374,6 +374,9 @@ blockquote {
   position : relative;
 }
 
+#criteria .query-group > fieldset{
+  background: #f9f9f9;
+}
 .pure-form .query-group > .queries {
   margin-bottom: 1.5em;
 }
