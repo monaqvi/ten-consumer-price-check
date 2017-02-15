@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Get help from someone who's been there, done that" name="description">
+  <title>LegUp</title>
+  <!-- Add meta data -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading" href="/career/">LegUp</a>
+    </div>
+  </header>
+  <main class="pure-u-1">
+    <div class="content">
+      <form class="pure-form md-l-box" id="survey">
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">I need help with...</h2>
+          </legend>
+          <div class="indented query-group">
+            <div class="queries">
+              <div class="pure-g">
+                <div class="pure-u-1 pure-u-lg-1-5">
+                  <fieldset class="form-group" required>
+                    <select required name="request_help_stage">
+                      <option value="" selected disabled></option>
+                      <option value="app">Application review / guidance</option>
+                      <option value="interview">Interview preparation</option>
+                      <option value="offer">Offer evaluation</option>
+                      <option value="other">Something else</option>
+                    </select>
+                    <label class="control-label" for="select">Select stage</label><i class="bar"></i>
+                  </fieldset>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      for
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group" required>
+                      <input type="text" required name="request_help_position"/>
+                      <label class="control-label" for="input">Position</label><i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      at
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group" required>
+                      <input type="text" required name="request_help_company"/>
+                      <label class="control-label" for="input">Company</label><i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tooltip">
+              <legend class="pure-u-1">
+                <h4 class="no-margin">Some examples:</h4>
+              </legend>
+              <div class="pure-g example">
+                <div class="pure-u-1 pure-u-lg-1-5">
+                  <fieldset class="form-group">
+                    <span>Application review / guidance</span>
+                    <i class="bar"></i>
+                  </fieldset>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      for
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
+                      <span>Marketing Manager</span>
+                      <i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      at
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
+                      <span>PepsiCo, General Mills</span>
+                      <i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pure-g example">
+                <div class="pure-u-1 pure-u-lg-1-5">
+                  <fieldset class="form-group">
+                    <span>Interview preparation</span>
+                    <i class="bar"></i>
+                  </fieldset>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      for
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
+                      <span>residency</span>
+                      <i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      at
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
+                      <span>Duke, Johns Hopkins, other surgery programs</span>
+                      <i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pure-g example">
+                <div class="pure-u-1 pure-u-lg-1-5">
+                  <fieldset class="form-group">
+                    <span>Offer evaluation</span>
+                    <i class="bar"></i>
+                  </fieldset>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      for
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
+                      <span>Entry vs. Senior Software Engineer</span>
+                      <i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                  <div class="pure-g">
+                    <p class="pure-u-1 pure-u-md-1-3 is-center">
+                      at
+                    </p>
+                    <fieldset class="pure-u-1 pure-u-md-2-3 form-group">
+                      <span>Google vs. a startup</span>
+                      <i class="bar"></i>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="indented">
+            <fieldset class="form-group">
+              <textarea required name="request_help_freeform"></textarea>
+              <label class="control-label" for="textarea">Any other details we should know?</label><i class="bar"></i>
+            </fieldset>
+          </div>
+        </section>
+
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">I want to speak with someone who...</h2>
+          </legend>
+
+          <div class="indented" id="criteria">
+            <fieldset class="pure-u-1" required>
+              <span class="label">Select all that apply:</legend>
+            </fieldset>
+            <div class="query-group pure-g">
+              <fieldset class="pure-u-1 checkbox">
+                <label>
+                  <input type="checkbox" name="works_company"/><i class="helper"></i>works at the company
+                </label>
+                <label>
+                  <input type="checkbox" name="works_competitor"/><i class="helper"></i>works at a competitor
+                </label>
+                <label>
+                  <input type="checkbox" name="works_industry"/><i class="helper"></i>works in the broader industry 
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="query-group pure-g">
+              <fieldset class="pure-u-1 checkbox">
+                <label>
+                  <input type="checkbox" name="works_same_role"/><i class="helper"></i>works in the same role
+                </label>
+                <label>
+                  <input type="checkbox" name="works_with_role"/><i class="helper"></i>works in a related role
+                </label>
+                <label>
+                  <input type="checkbox" name="hires_for_role"/><i class="helper"></i>hires for the role
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="query-group pure-g">
+              <fieldset class="pure-u-1 checkbox">
+                <label>
+                  <input type="checkbox" name="currently_works"/><i class="helper"></i>currently works there
+                </label>
+                <label>
+                  <input type="checkbox" name="has_worked"/><i class="helper"></i>has worked there in the past
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <fieldset class="form-group">
+            <textarea required name="request_someone_freeform"></textarea>
+            <label class="control-label" for="textarea">Anything else we should know about your ideal advisor?</label><i class="bar"></i>
+          </fieldset>
+
+          <fieldset class="pure-u-1" id="contacts">
+            <h4 class="no-margin">Do you have any examples or specific people in mind you'd like to contact?</h4>
+            <div class="pure-g query-group">
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+                  <input type="text" name="request_someone_specific_name" required>
+                  <label class="control-label" for="input">Name</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_someone_specific_linkedin" />
+                  <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3">
+              <div class="pure-u-1 pure-u-md-1-3 is-center float-right" id="speak_with_add_contact">
+                <button class="button tight sm-fill no-margin" type="button"><span>+</span></button>
+              </div>
+              <div class="pure-u-1 pure-u-md-1-3 is-center float-left hide" id="speak_with_remove_contact">
+                <button class="button tight red sm-fill" type="button"><span>-</span></button>
+              </div>
+              <div class="clear-float"></div>
+            </fieldset>
+          </div>
+        </section>
+
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">A few more details we need to know before introducing you...</h2>
+          </legend>
+          <h4 class="no-margin pure-u-1 indented">What is your</h4>
+          <div class="indented">
+            <div class="pure-g">
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                  <input type="text" required name="request_submitter_name"/>
+                  <label class="control-label" for="input">Preferred Name</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                  <input type="email" required name="request_submitter_email"/>
+                  <label class="control-label" for="input">Email Address</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_submitter_linkedin"/>
+                  <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <span class="indented shrunk-font">Your email won't be shared or spammed.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="indented">
+            <div class="pure-g">
+              <div class="pure-u-1 form-radio">
+                <fieldset required>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="request_submitter_privacy" required/><i class="helper"></i>I'm OK sharing my name and profile with the advisor
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="request_submitter_privacy" required/><i class="helper"></i>Please DO NOT share my name and profile -- only use generic description
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h4 class="no-margin pure-u-1 indented">I would like to talk using</h4>
+            <div class="indented">
+              <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-3">
+                  <fieldset class="form-group" required>
+                    <select required name="request_submitter_medium">
+                      <option value="" selected disabled></option>
+                      <option value="phone">Phone</option>
+                      <option value="video">Video Chat</option>
+                      <option value="person">In Person</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label class="control-label" for="select">Select a medium</label><i class="bar"></i>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h4 class="no-margin pure-u-1 indented">Any deadline?</h4>
+            <div class="indented">
+              <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-3">
+                  <fieldset class="pure-u-1 form-group">
+                    <input type="date" required name="request_submitter_deadline"/>
+                    <label class="control-label" for="input">mm/dd/yyyy</label><i class="bar"></i>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">Using the info you've provided, we'll send you a list of potential matches.</h2>
+          </legend>
+          <h4 class="indented no-top-margin ">You can then review the list and finalize terms with the advisor(s) of your choice.</h4>
+
+          <!-- <h4 class="no-margin indented">How many hours would you like to reserve with your advisor?</h4> -->
+
+          <!-- <div class="indented">
+            <div class="pure-u-1">
+              <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                <input type="number" min="0" required/>
+                <label class="control-label" for="input">Estimated # Hours</label><i class="bar"></i>
+              </fieldset>
+            </div>
+          </div> -->
+
+          <!-- <br> -->
+
+          <div class="indented query-group">
+            <h4 class="no-margin">What is the <span class="underline">most you'd pay</span> for your time with your advisor? (<span class="underline">We'll try for lower</span>, but need to know your ceiling).</h4>
+            <div class="pure-u-1">
+              <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                <input type="text" pattern="^[$]?[\d,]+(?:\.[\d]{0,2})?$" min="0" required name="request_max_price"/>
+                <label class="control-label" for="input">Maximum price</label><i class="bar"></i>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="indented">
+            <fieldset class="form-group">
+              <textarea required name="request_freeform"></textarea>
+              <label class="control-label" for="textarea">Anything else we should know before introducing you?</label><i class="bar"></i>
+            </fieldset>
+          </div>
+        </section>
+
+        <div class="pure-u-1 is-center">
+          <a class="button extra-bottom-margin sm-fill" href="#invalid" id="submit"><span>Connect Me</span></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="hide" id="templates">
+      <div id="contact">
+        <div class="pure-g query-group">
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+              <input type="text" name="request_someone_specific_name" required>
+              <label class="control-label" for="input">Name</label><i class="bar"></i>
+            </fieldset>
+          </div>
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+              <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_someone_specific_likedin"/>
+              <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="m-box ribbon dark-ribbon footer">
+      <a href="mailto:moashared@gmail.com">Contact Us</a>
+    </footer>
+  </main>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+<script type="text/javascript" src="/js/form.js"></script>
+</html>
