@@ -87,7 +87,7 @@ $(function() {
       $.ajax({
         method: 'POST',
         contentType: 'application/json',
-        url: "/app/save",
+        url: "/app/consumer/save",
         data: JSON.stringify(sorted),
       })
       .done(function(res) {
