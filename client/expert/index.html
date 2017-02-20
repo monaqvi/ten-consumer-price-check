@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Get help from someone who's been there, done that" name="description">
+  <title>LegUp</title>
+  <!-- Add meta data -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal">
+      <a class="pure-menu-heading" href="/school/">LegUp</a>
+    </div>
+  </header>
+  <main class="no-top-margin">
+    <div class="content">
+      <form class="pure-form md-l-box" id="survey">
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">Contact Information</h2>
+          </legend>
+          <div class="indented">
+            <div class="pure-g">
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                  <input type="text" required name="request_submitter_name"/>
+                  <label class="control-label" for="input">Preferred Name</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                  <input type="email" required name="request_submitter_email"/>
+                  <label class="control-label" for="input">Email Address</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                  <input type="text" pattern="^((http[s]?|ftp):\/)?\/?([^:\/\s]+)((\/\w+)*\/)([\w\-\.]+[^#?\s]+)(.*)?(#[\w\-]+)?$" required name="request_submitter_linkedin"/>
+                  <label class="control-label" for="input">LinkedIn URL</label><i class="bar"></i>
+                </fieldset>
+              </div>
+              <div class="pure-u-1">
+                <span class="indented shrunk-font">Your email won't be shared or spammed.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="indented">
+            <div class="pure-g">
+              <div class="pure-u-1 form-radio">
+                <fieldset required>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="request_submitter_privacy" required/><i class="helper"></i>I'm OK sharing my name and profile with potential clients
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="request_submitter_privacy" required/><i class="helper"></i>Please DO NOT share my name and profile -- only use generic description
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h4 class="no-margin pure-u-1 indented">I would like to talk using</h4>
+            <div class="indented">
+              <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-3">
+                  <fieldset class="form-group" required>
+                    <select required name="request_submitter_medium">
+                      <option value="" selected disabled></option>
+                      <option value="phone">Phone</option>
+                      <option value="video">Video Chat</option>
+                      <option value="person">In Person</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label class="control-label" for="select">Select a medium</label><i class="bar"></i>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">Areas of expertise</h2>
+          </legend>
+
+          <div class="indented" id="criteria">
+            <fieldset class="pure-u-1" required>
+              <h4 class="no-margin">What are you willing to help people with?</h4>
+              <span class="label">Select all that apply:</legend>
+            </fieldset>
+            <div class="query-group pure-g">
+              <fieldset class="pure-u-1 checkbox">
+                <label>
+                  <input type="checkbox" name="app"/><i class="helper"></i>Application review / guidance
+                </label>
+                <label>
+                  <input type="checkbox" name="interview"/><i class="helper"></i>Interview preparation
+                </label>
+                <label>
+                  <input type="checkbox" name="offer"/><i class="helper"></i>Offer evaluation
+                </label>
+                <label>
+                  <input type="checkbox" name="other"/><i class="helper"></i>Anything else
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <fieldset class="pure-u-1" id="contacts">
+            <h4 class="no-margin">We will go through your LinkedIn profile to determine your best matches.</h4>
+            <h4 class="no-margin">Do you have any areas of expertise other than the ones in your LinkedIn Profile?</h4>
+            <div class="pure-g query-group">
+              <div class="pure-u-1">
+                <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+                  <input type="text" required name="request_someone_specific_linkedin" />
+                  <label class="control-label" for="input">Interest</label><i class="bar"></i>
+                </fieldset>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3">
+              <div class="pure-u-1 pure-u-md-1-3 is-center float-right" id="speak_with_add_contact">
+                <button class="button tight sm-fill no-margin" type="button"><span>+</span></button>
+              </div>
+              <div class="pure-u-1 pure-u-md-1-3 is-center float-left hide" id="speak_with_remove_contact">
+                <button class="button tight red sm-fill" type="button"><span>-</span></button>
+              </div>
+              <div class="clear-float"></div>
+            </fieldset>
+          </div>
+        </section>
+
+        <section>
+          <legend class="pure-u-1">
+            <h2 class="no-margin">Using the info you've provided, we'll send you a list of potential matches.</h2>
+          </legend>
+          <h4 class="indented no-top-margin ">You can then review the list and finalize terms with the advisor(s) of your choice.</h4>
+          <div class="indented query-group">
+            <h4 class="no-margin">What is the <span class="underline">hourly rate</span> for your time? (We'll only send you requests that are willing to <span class="underline">pay this much or more</span>, but need to know your ceiling).</h4>
+            <div class="pure-u-1">
+              <fieldset class="pure-u-1 pure-u-md-1-3 form-group" required>
+                <input type="text" pattern="^[$]?[\d,]+(?:\.[\d]{0,2})?$" min="0" required name="request_max_price"/>
+                <label class="control-label" for="input">Hourly rate</label><i class="bar"></i>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="indented">
+            <fieldset class="form-group">
+              <textarea required name="request_freeform"></textarea>
+              <label class="control-label" for="textarea">Anything else we should know before introducing you?</label><i class="bar"></i>
+            </fieldset>
+          </div>
+        </section>
+
+        <div class="pure-u-1 is-center">
+          <a class="button extra-bottom-margin sm-fill" href="#invalid" id="submit"><span>Submit</span></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="hide" id="templates">
+      <div id="contact">
+        <div class="pure-g query-group">
+          <div class="pure-u-1">
+            <fieldset class="pure-u-1 pure-u-md-1-3 form-group">
+              <input type="text" required name="request_someone_specific_likedin"/>
+              <label class="control-label" for="input">Interest</label><i class="bar"></i>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="m-box ribbon dark-ribbon footer">
+      <a href="mailto:moashared@gmail.com">Contact Us</a>
+    </footer>
+  </main>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+<script type="text/javascript" src="/js/form.js"></script>
+</html>
