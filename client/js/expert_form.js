@@ -58,7 +58,7 @@ $(function() {
 
       var rows = criterion
                   .map(function(criteria) { return interests.map(function(interest) { return Object.assign({}, criteria, interest); }); })
-                  .map(function(combined) { return combined.map(function(e) { return Object.assign({ source: window.location.pathname }, e, singleResponses); }) });
+                  .map(function(combined) { return combined.map(function(e) { return Object.assign({ source: window.location.pathname  + window.location.search }, e, singleResponses); }) });
 
       var data = _.flattenDeep(rows);
       var sorted = _.sortBy(data, ['expert_offering_num', 'expertise_num']);
