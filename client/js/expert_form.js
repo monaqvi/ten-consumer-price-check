@@ -71,7 +71,7 @@ $(function() {
       })
       .done(function(res) {
           console.log(res);
-          window.location.href = '../thankyou/';
+          window.location.href = './thankyou/';
         })
       .fail(function() {
         console.warn('failed to submit');
