@@ -42,7 +42,7 @@ $(function() {
                                               .reduce(nameToValue, {});
 
       var criterion = $('#criteria input:checked').toArray().map(function(e, i) { 
-        return { offering_num: i, offering_criteria: e.name }; 
+        return { expert_offering_num: i, expert_offering: e.name }; 
       });
 
       var interests = $('#interests input')
@@ -51,7 +51,7 @@ $(function() {
                         return e.value;
                       })
                       .map(function(e, i) {
-                        return { expertise_num: i , expertise: e.value };
+                        return { expert_expertise_num: i , expert_expertise: e.value };
                       });
 
       interests = !!interests.length ? interests : [ {} ];
@@ -61,7 +61,7 @@ $(function() {
                   .map(function(combined) { return combined.map(function(e) { return Object.assign({ source: window.location.pathname }, e, singleResponses); }) });
 
       var data = _.flattenDeep(rows);
-      var sorted = _.sortBy(data, ['offering_num', 'request_someone_specific_num']);
+      var sorted = _.sortBy(data, ['expert_offering_num', 'expertise_num']);
 
       $.ajax({
         method: 'POST',
