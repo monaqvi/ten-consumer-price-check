@@ -2,6 +2,7 @@ const express = require('express');
 const router = new express.Router();
 
 const randomUuid = require('random-uuid');
+const moment = require('moment-timezone');
 
 const saveToGoogle = require('./../google-sheets/index.js');
 
@@ -9,7 +10,7 @@ var timestamp = function() {;
   const date = new Date;
   return {
             date: `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`,
-            time: date.toString(),
+            time: (moment().tz("America/Los_Angeles").format().split('T')[1]).replace('-08:00',""),
           };
 };
 
