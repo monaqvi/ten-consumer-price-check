@@ -21,12 +21,10 @@ $(function() {
         second = $(queryGroups[1]);
 
     first.change(function() {
-      console.log('changed')
       toggleTooltip.call(this, 50);
     });
 
     first.keyup(function() {
-      console.log('pressed')
       toggleTooltip.call(this, 50);
     });
 
@@ -78,7 +76,14 @@ $(function() {
                         return e[0].value || e[1].value;
                       })
                       .map(function(e, i) {
-                        return Object.assign({ request_someone_specific_num: i }, e.reduce(nameToValue, {}));
+                        return Object.assign(
+                          {},
+                          {
+                            request_someone_specific_num: i,
+                            request_someone_specific_name: e[0].value,
+                            request_someone_specific_linkedin: e[1].value,
+                          },
+                        );
                       });
 
       contacts = !!contacts.length ? contacts : [ {} ];
@@ -97,12 +102,11 @@ $(function() {
         data: JSON.stringify(sorted),
       })
       .done(function(res) {
-          console.log(res);
           window.location.href = '../thankyou/';
         })
       .fail(function() {
-        console.warn('failed to submit');
         submitted = false;
+        console.warn('failed to submit');
       });
     }
 
