@@ -24,7 +24,7 @@ router.post('/consumer/new', (req, res) => {
 
   const len = rows.length - 1;
   const log = Object.assign({}, { request_id: randomUuid() }, timestamp());
-  rows.map((data, i) => saveToGoogle.saveConsumerResults(Object.assign(log, data), (i === len) ? res : null));
+  rows.map((data, i) => saveToGoogle.saveConsumerResults(Object.assign({}, log, data), (i === len) ? res : null));
 });
 
 router.post('/expert/new', (req, res) => {
@@ -32,7 +32,7 @@ router.post('/expert/new', (req, res) => {
 
   const len = rows.length - 1;
   const log = Object.assign({}, { expert_id: randomUuid() }, timestamp());
-  rows.map((data, i) => saveToGoogle.saveExpertInfo(Object.assign(log, data), (i === len) ? res : null));
+  rows.map((data, i) => saveToGoogle.saveExpertInfo(Object.assign({}, log, data), (i === len) ? res : null));
 });
 
 module.exports = router;
