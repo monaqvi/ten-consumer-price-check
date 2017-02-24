@@ -21,18 +21,24 @@ $(function() {
         second = $(queryGroups[1]);
 
     first.change(function() {
-      toggleTooltip.call(this);
+      console.log('changed')
+      toggleTooltip.call(this, 50);
     });
 
-    first.keypress(function() {
-      toggleTooltip.call(this);
+    first.keyup(function() {
+      console.log('pressed')
+      toggleTooltip.call(this, 50);
     });
 
-    function toggleTooltip() {
+    setTimeout(function() {
+      toggleTooltip.call(first, 100);
+    }, 2500);
+
+    function toggleTooltip(speed) {
       var self = $(this);
       var valid = !self.find('input:invalid, select:invalid, textarea:invalid').length;
       var tooltip = $(self.find('.tooltip'));
-      valid ? tooltip.hide(50) : tooltip.show(50);
+      valid ? tooltip.hide(speed) : tooltip.show(speed);
     }
   })();
 
