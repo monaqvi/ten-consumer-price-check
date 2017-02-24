@@ -76,14 +76,7 @@ $(function() {
                         return e[0].value || e[1].value;
                       })
                       .map(function(e, i) {
-                        return Object.assign(
-                          {},
-                          {
-                            request_someone_specific_num: i,
-                            request_someone_specific_name: e[0].value,
-                            request_someone_specific_linkedin: e[1].value,
-                          },
-                        );
+                        return Object.assign({},{request_someone_specific_num: i,request_someone_specific_name: e[0].value,request_someone_specific_linkedin: e[1].value,});
                       });
 
       contacts = !!contacts.length ? contacts : [ {} ];
